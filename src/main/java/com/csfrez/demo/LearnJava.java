@@ -22,6 +22,7 @@ import java.security.GeneralSecurityException;
 import java.security.KeyStore;
 import java.util.Base64;
 import java.util.List;
+import java.util.Objects;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicLong;
 
@@ -60,6 +61,7 @@ public class LearnJava {
 		// setup the HTTPS context and parameters
 		sslContext.init(kmf.getKeyManagers(), tmf.getTrustManagers(), null);
 		server.setHttpsConfigurator(new HttpsConfigurator(sslContext) {
+			@Override
 			public void configure(HttpsParameters params) {
 				try {
 					// initialise the SSL context
