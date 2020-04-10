@@ -9,7 +9,7 @@ import java.io.IOException;
 import java.io.PrintWriter;
 
 // WebServlet注解表示这是一个Servlet，并映射到地址/:
-@WebServlet(urlPatterns = "/")
+@WebServlet(urlPatterns = "/hello")
 public class HelloServlet extends HttpServlet {
 
     @Override
